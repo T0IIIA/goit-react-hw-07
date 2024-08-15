@@ -12,6 +12,7 @@ const App = () => {
   const loading = useSelector(selectLoading)
   const error = useSelector(selectError)
   const dispatch = useDispatch()
+  
 
   useEffect(() => {
     dispatch(fetchContacts())
@@ -19,13 +20,12 @@ const App = () => {
 
   return (
     <div className={s.container}>
-
       <h1>Phonebook</h1>
-      <ContactForm /> 
+      <ContactForm />
       <SearchBox />
-      <ContactList />
       {loading && <h2>Loading...please wait</h2>}
       {error && <h2>Oops...something went wrong!</h2>}
+      <ContactList />
     </div>
   )
 

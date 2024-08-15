@@ -5,7 +5,7 @@ const initialState = {
   contacts: {
     items: [],
     loading: false,
-    error: false,
+    error: null,
   },
 }
 
